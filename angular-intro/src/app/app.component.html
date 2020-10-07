@@ -1,0 +1,14 @@
+<nav>
+  <ul>
+    <li class="stealth"><a>Angular</a></li>
+    <li *ngFor="let page of appPages">
+      <a routerLink="{{page.url}}"
+         routerLinkActive="active">{{page.title}}</a>
+    </li>
+  </ul>
+</nav>
+<div class="divider">
+
+</div>
+<!-- The routed views render in the <router-outlet>-->
+<router-outlet></router-outlet>

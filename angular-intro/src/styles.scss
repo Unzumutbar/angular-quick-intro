@@ -1,0 +1,83 @@
+$cp-blue: #009de0;
+$cp-gray:#868686;
+
+/* You can add global styles to this file, and also import other style files */
+* {
+  font-family: 'Open Sans',
+  sans-serif !important;
+  /* Add !important to overwrite all elements */
+}
+
+div.pageheader {
+  width: 100%;
+  background-color: white;
+  font-size: 2em;
+  font-weight: bolder;
+  margin-top: 2vh;
+  margin-bottom: 5vh;
+  text-align: center;
+}
+
+div.pageheader a {
+  font-size: 0.7em;
+  font-weight: bolder;
+  margin-top: 1vh;
+}
+
+.center {
+  text-align: center;
+}
+
+div.content {
+  width: 100%;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+}
+
+div.content.head{
+  background-color: lightgray;
+  font-size: 1.2em;
+}
+
+div.content.body{
+  margin-bottom: 6vh;
+  padding-left: 2vh;
+  padding-right: 2vh;
+}
+
+input {
+  margin-right: 2vw;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.table-striped {
+  width: 95%;
+  border-collapse: collapse;
+}
+
+.table-striped.small {
+  width: 50%;
+  border-collapse: collapse;
+}
+
+.table-striped th {
+  padding: 7px;
+  border: #4e95f4 1px solid;
+  background: #4e95f4;
+}
+
+.table-striped td {
+  padding: 7px;
+  border: #4e95f4 1px solid;
+}
+
+.table-striped tr:nth-child(odd) {
+  background: #b8d1f3;
+}
+
+.table-striped tr:nth-child(even) {
+  background: #dae5f4;
+}

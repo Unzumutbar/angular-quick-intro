@@ -1,0 +1,43 @@
+<div class="pageheader">
+    Directives
+    <br>
+    <a href="https://angular.io/api/common#directives"
+        class="center">
+        https://angular.io/api/common#directives
+    </a>
+</div>
+
+<div class="content head">
+    <div>ngClass</div>
+</div>
+<div class="content body">
+    <input type="text"
+           [(ngModel)]="classInput">
+    <div [ngClass]="classInput">
+        Style me with classes
+    </div>
+</div>
+
+<div class="content head">
+    <div>ngIf</div>
+</div>
+<div class="content body">
+    <input type="number"
+           [(ngModel)]="numberInput">
+    <div *ngIf="numberInput >= 1">Eins</div>
+    <div *ngIf="numberInput >= 5 && numberInput < 15">Fünf</div>
+    <div *ngIf="numberInput >= 10">Zehn</div>
+</div>
+
+<div class="content head">
+    <div>ngFor</div>
+</div>
+<div class="content body">
+    <ul>
+        <li *ngFor="let c of customers">
+            <div [style.color]="c.vip ? 'red' : 'black'">
+                {{c.name}}: {{c.purchases}}
+            </div>
+        </li>
+    </ul>
+</div>

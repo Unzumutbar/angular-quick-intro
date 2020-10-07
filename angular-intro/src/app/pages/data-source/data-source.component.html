@@ -1,0 +1,76 @@
+<div class="pageheader">CRUD Operations</div>
+
+<div class="content head">
+    <div>Customers</div>
+</div>
+<div class="content body">
+    <table class="table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Branch</th>
+                <th>Purchases</th>
+                <th>
+                    <div style="float: right;">
+                        <button [routerLink]="['addcustomer']">Add</button>
+                    </div>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let customer of customers" [style.color]="!customer.branch?.active ? 'gray' : 'black'">
+                <td class="text-right">{{customer.id}}</td>
+                <td>{{customer.name}}</td>
+                <td>
+                    {{customer.branch?.name}}
+                </td>
+                <td class="text-right"
+                [style.color]="!customer.branch?.active ? 'gray' :customer.purchases < 100 ? 'red' : 'black'">
+                    {{customer.purchases | currency:'EUR':'symbol':'1.2-2'}}
+                </td>
+                <td>
+                    <div style="float: right;">
+                        <button *ngIf="customer.branch?.active"
+                                [routerLink]="[customer.id,'editcustomer']">Edit</button>
+                        <button (click)="deleteCustomer(customer.id)">Delete</button>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="content head">
+    <div>Branches</div>
+</div>
+<div class="content body">
+    <table class="table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>
+                    <div style="float: right;">
+                        <button [routerLink]="['addbranch']">Add</button>
+                    </div>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let branch of branches"
+                >
+                <td class="text-right">{{branch.id}}</td>
+                <td>{{branch.name}}</td>
+                <td>
+                    <div style="float: right;">
+                        <button *ngIf="!branch.active"
+                                (click)="changeBranchStatus(branch.id, true)">Activate</button>
+                        <button *ngIf="branch.active"
+                                (click)="changeBranchStatus(branch.id, false)">Deactivate</button>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

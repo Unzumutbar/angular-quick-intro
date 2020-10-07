@@ -1,0 +1,50 @@
+<div class="pageheader">
+    Bindings
+    <br>
+    <a href="https://angular.io/guide/binding-syntax"
+       class="center">
+        https://angular.io/guide/binding-syntax
+    </a>
+</div>
+
+<div class="content head">
+    <div>Two-Way-Binding</div>
+</div>
+<div class="content body">
+    <p>
+        <input type="text"
+               [(ngModel)]="twoWayInput">
+    </p>
+    <label>Two Way Binding: </label>{{twoWayInput}}
+    <p>
+        <input type="text"
+               [(ngModel)]="twoWayInput">
+    </p>
+</div>
+
+<div class="content head">
+    <div>One-Way-Binding</div>
+</div>
+<div class="content body">
+    <p>
+        <input type="text"
+               [(ngModel)]="oneWayInput">
+    </p>
+    <p>
+        <label>One-Way-Binding: </label>
+        <input type="text"
+               [ngModel]="oneWayInput">
+    </p>
+    <p>
+        <label>Two-Way-Binding: </label>
+        <input type="text"
+               [(ngModel)]="oneWayInput">
+    </p>
+</div>
+
+<div class="content head">
+    <div>Null Propagation</div>
+</div>
+<div class="content body">
+    <p>{{customer?.name}}</p>
+</div>

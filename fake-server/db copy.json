@@ -1,0 +1,89 @@
+{
+  "customers": [{
+      "id": 1,
+      "name": "George",
+      "purchases": 20,
+      "branchId": 1
+    },
+    {
+      "id": 2,
+      "name": "Martha",
+      "purchases": 100,
+      "branchId": 3
+    },
+    {
+      "id": 3,
+      "name": "John",
+      "purchases": 50,
+      "branchId": 4
+    },
+    {
+      "id": 4,
+      "name": "Abigail",
+      "purchases": 130,
+      "branchId": 2
+    },
+    {
+      "id": 5,
+      "name": "Thomas",
+      "purchases": 80,
+      "branchId": 3
+    },
+    {
+      "id": 6,
+      "name": "Elizabeth",
+      "purchases": 160,
+      "branchId": 1
+    },
+    {
+      "id": 7,
+      "name": "Walther",
+      "purchases": 500,
+      "branchId": 3
+    },
+    {
+      "id": 8,
+      "name": "Louisa",
+      "purchases": 77,
+      "branchId": 4
+    },
+    {
+      "id": 9,
+      "name": "Martin",
+      "purchases": 440,
+      "branchId": 2
+    },
+    {
+      "id": 10,
+      "name": "Gaben",
+      "purchases": 22,
+      "branchId": 5
+    }
+  ],
+  "branches": [{
+      "id": 1,
+      "name": "Hong Kong",
+      "active": true
+    },
+    {
+      "id": 2,
+      "name": "Atlanta",
+      "active": true
+    },
+    {
+      "id": 3,
+      "name": "Frankfurt",
+      "active": true
+    },
+    {
+      "id": 4,
+      "name": "Seoul",
+      "active": true
+    },
+    {
+      "id": 5,
+      "name": "Black Mesa",
+      "active": false
+    }
+  ]
+}

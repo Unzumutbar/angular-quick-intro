@@ -1,0 +1,70 @@
+<div class="pageheader">
+    Pipes
+    <br>
+    <a href="https://angular.io/api/common#pipes"
+       class="center">
+        https://angular.io/api/common#pipes
+    </a>
+</div>
+
+
+<div class="content head">
+    <div>String Pipe</div>
+</div>
+<div class="content body">
+    <input type="text"
+           [(ngModel)]="textInput">
+    <p>
+        <label>Uppercase: </label>
+        {{textInput | uppercase}}
+        <br>
+        <label>Lowercase: </label>
+        {{textInput | titlecase}}
+    </p>
+</div>
+
+
+<div class="content head">
+    <div>Date Pipe</div>
+</div>
+<div class="content body">
+    <input type="date"
+           [(ngModel)]="dateInput">
+    <p>
+        <label>Short: </label>
+        {{dateInput | date}}
+        <br>
+        <label>Custom: </label>
+        {{dateInput | date:"MM/dd/yy hh:mm"}}
+        <label>Custom: </label>
+        {{dateInput | date:"GGGG yy/MMM/EEEE" | uppercase}}
+    </p>
+</div>
+
+<div class="content head">
+    <div>Number Pipes</div>
+</div>
+<div class="content body">
+    <input type="number"
+           [(ngModel)]="numberInput">
+    <p>
+        <label>Decimal: </label>
+        {{numberInput | number:'1.3-3'}}
+        <br>
+        <label>Percent: </label>
+        {{numberInput | percent}}
+    </p>
+</div>
+
+<div class="content head">
+    <div>Custom Pipes</div>
+</div>
+<div class="content body">
+    <input type="number"
+           [(ngModel)]="customInput">
+    <p>
+        <label>Custom:</label>
+        {{customInput | square}}
+        {{customInput | increment}}
+    </p>
+</div>

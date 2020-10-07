@@ -1,0 +1,46 @@
+<div class="pageheader">Add Customer</div>
+
+<div class="content body">
+    <form [formGroup]="customerAddForm">
+        <table class="table-striped small">
+            <tbody>
+                <tr>
+                    <td><label for="Name">Name</label></td>
+                    <td>
+                        <input class="form-control"
+                               id="Name"
+                               name="name"
+                               type="text"
+                               formControlName="name">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="Purchases">Purchases</label></td>
+                    <td><input class="form-control"
+                               id="Purchases"
+                               name="purchases"
+                               type="number"
+                               formControlName="purchases">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="BranchId">Branch ID</label></td>
+                    <td><input class="form-control"
+                               id="BranchId"
+                               name="branchId"
+                               type="number"
+                               formControlName="branchId">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button style="float: left;"
+                                (click)="cancel()">Cancel</button>
+                        <button style="float: right;"
+                                (click)="addCustomer()">Save</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</div>

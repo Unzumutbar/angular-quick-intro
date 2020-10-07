@@ -1,0 +1,37 @@
+<div class="pageheader">Add Branch</div>
+
+<div class="content body">
+    <form [formGroup]="branchAddForm">
+        <table class="table-striped small">
+            <tbody>
+                <tr>
+                    <td><label for="Name">Name</label></td>
+                    <td>
+                        <input class="form-control"
+                               id="Name"
+                               name="name"
+                               type="text"
+                               formControlName="name">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="Active">Active</label></td>
+                    <td><input class="form-control"
+                               id="Active"
+                               name="active"
+                               type="checkbox"
+                               formControlName="active">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button style="float: left;"
+                                (click)="cancel()">Cancel</button>
+                        <button style="float: right;"
+                                (click)="addBranch()">Save</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</div>
